@@ -1,0 +1,47 @@
+---
+import Layout from './Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="blog-post">
+    <header>
+      <h1>{frontmatter.title}</h1>
+      <p class="post-meta">By {frontmatter.author} on {new Date(frontmatter.date).toLocaleDateString()}</p>
+      {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} class="post-image" />}
+    </header>
+    <div class="content">
+      <slot />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  header {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    color: rgb(var(--accent));
+  }
+  .post-meta {
+    font-style: italic;
+    color: #666;
+  }
+  .post-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  .content {
+    line-height: 1.6;
+  }
+</style>

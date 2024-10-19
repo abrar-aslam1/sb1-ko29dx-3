@@ -1,0 +1,56 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer>
+	<div class="footer-content">
+		<p>&copy; {currentYear} BizSecurity. All rights reserved.</p>
+		<ul>
+			<li><a href="/privacy">Privacy Policy</a></li>
+			<li><a href="/terms">Terms of Service</a></li>
+		</ul>
+	</div>
+</footer>
+
+<style>
+	footer {
+		background-color: rgb(var(--accent-dark));
+		color: #fff;
+		padding: 2rem 1rem;
+		margin-top: 2rem;
+	}
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	ul {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0 0;
+	}
+	li {
+		margin: 0 0.75rem;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+		transition: opacity 0.3s ease;
+	}
+	a:hover {
+		opacity: 0.8;
+	}
+
+	@media (min-width: 768px) {
+		.footer-content {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		ul {
+			margin: 0;
+		}
+	}
+</style>

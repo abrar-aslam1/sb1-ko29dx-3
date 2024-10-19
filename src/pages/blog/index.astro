@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+
+const posts = [
+	{ title: "5 Essential Cybersecurity Tips for Small Businesses", url: "/blog/5-essential-cybersecurity-tips" },
+	{ title: "The Importance of Employee Training in Security", url: "/blog/importance-of-employee-training" },
+	{ title: "How to Create a Disaster Recovery Plan", url: "/blog/create-disaster-recovery-plan" },
+	{ title: "Understanding and Implementing Multi-Factor Authentication", url: "/blog/understanding-multi-factor-authentication" },
+	{ title: "The Role of Firewalls in Small Business Security", url: "/blog/role-of-firewalls" }
+];
+---
+
+<Layout title="Blog | BizSecurity">
+	<h1>Security Insights for Small Businesses</h1>
+	<p>Stay informed about the latest trends and best practices in small business security.</p>
+	<div class="blog-grid">
+		{posts.map(post => (
+			<Card href={post.url} title={post.title} body="Read more about this security topic" />
+		))}
+	</div>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: rgb(var(--accent));
+	}
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+	.blog-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+</style>

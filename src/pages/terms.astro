@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lastUpdated = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
+---
+
+<Layout title="Terms of Service">
+  <div class="terms-of-service">
+    <h1>Terms of Service</h1>
+    <p>Last updated: {lastUpdated}</p>
+
+    <section>
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing and using BizSecurity's website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
+    </section>
+
+    <section>
+      <h2>2. Description of Service</h2>
+      <p>BizSecurity provides a community platform and resources for small business cybersecurity. Our services include but are not limited to educational content, forums, and security tools.</p>
+    </section>
+
+    <section>
+      <h2>3. User Accounts</h2>
+      <p>To access certain features of our service, you may be required to create an account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.</p>
+    </section>
+
+    <section>
+      <h2>4. User Conduct</h2>
+      <p>You agree to use our services only for lawful purposes and in accordance with these Terms. You may not use our services in any way that could damage, disable, overburden, or impair our servers or networks.</p>
+    </section>
+
+    <section>
+      <h2>5. Intellectual Property</h2>
+      <p>The content, organization, graphics, design, and other matters related to the Site are protected under applicable copyrights and other proprietary laws. Copying, redistribution, use or publication of any such matters or any part of the Site is prohibited without our express permission.</p>
+    </section>
+
+    <section>
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>Our services are provided "as is" without any warranties, expressed or implied. We do not warrant that our services will be uninterrupted or error-free.</p>
+    </section>
+
+    <section>
+      <h2>7. Limitation of Liability</h2>
+      <p>BizSecurity shall not be liable for any indirect, incidental, special, consequential or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms at any time. We will always post the most current version on our site. By continuing to use our service after changes become effective, you agree to be bound by the revised terms.</p>
+    </section>
+
+    <section>
+      <h2>9. Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.</p>
+    </section>
+
+    <section>
+      <h2>10. Contact Information</h2>
+      <p>If you have any questions about these Terms, please contact us at:</p>
+      <p>Email: terms@bizsecurity.com</p>
+      <p>Address: 123 Security Street, Cybertown, CT 12345, United States</p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .terms-of-service {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  h1 {
+    color: rgb(var(--accent));
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    color: rgb(var(--accent));
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+</style>

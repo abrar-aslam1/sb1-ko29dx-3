@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const lastUpdated = new Date().toISOString().split('T')[0]; // Current date in YYYY-MM-DD format
+---
+
+<Layout title="Privacy Policy">
+  <div class="privacy-policy">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: {lastUpdated}</p>
+
+    <section>
+      <h2>1. Introduction</h2>
+      <p>Welcome to BizSecurity. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+    </section>
+
+    <section>
+      <h2>2. Information We Collect</h2>
+      <p>We collect personal information that you provide to us, such as your name, email address, and any other information you choose to provide when you:</p>
+      <ul>
+        <li>Register for an account</li>
+        <li>Sign up for our newsletter</li>
+        <li>Participate in our community forums</li>
+        <li>Contact us for support</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Provide, maintain, and improve our services</li>
+        <li>Communicate with you about our services, updates, and security alerts</li>
+        <li>Respond to your inquiries and support requests</li>
+        <li>Monitor and analyze usage patterns and trends</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Information Sharing and Disclosure</h2>
+      <p>We do not sell your personal information. We may share your information with third-party service providers who help us operate our website and deliver our services. These providers are obligated to keep your information confidential and secure.</p>
+    </section>
+
+    <section>
+      <h2>5. Data Security</h2>
+      <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized or unlawful processing, accidental loss, destruction, or damage.</p>
+    </section>
+
+    <section>
+      <h2>6. Your Rights</h2>
+      <p>You have the right to access, correct, or delete your personal information. You may also have the right to restrict or object to certain processing of your data. To exercise these rights, please contact us using the information provided below.</p>
+    </section>
+
+    <section>
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+    </section>
+
+    <section>
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p>Email: privacy@bizsecurity.com</p>
+      <p>Address: 123 Security Street, Cybertown, CT 12345, United States</p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .privacy-policy {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  h1 {
+    color: rgb(var(--accent));
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    color: rgb(var(--accent));
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  ul {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+</style>

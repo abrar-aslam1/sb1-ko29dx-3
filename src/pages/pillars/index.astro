@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+
+const pillars = [
+	{ title: "Network Security", url: "/pillars/network-security" },
+	{ title: "Data Protection", url: "/pillars/data-protection" },
+	{ title: "Physical Security", url: "/pillars/physical-security" },
+	{ title: "Employee Security Awareness", url: "/pillars/employee-security-awareness" },
+	{ title: "Incident Response and Recovery", url: "/pillars/incident-response-recovery" }
+];
+---
+
+<Layout title="Security Pillars | BizSecurity">
+	<h1>Core Security Pillars for Small Businesses</h1>
+	<p>Explore these fundamental aspects of small business security to build a comprehensive protection strategy.</p>
+	<div class="pillar-grid">
+		{pillars.map(pillar => (
+			<Card href={pillar.url} title={pillar.title} body="Learn more about this security pillar" />
+		))}
+	</div>
+</Layout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: rgb(var(--accent));
+	}
+	p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
+	}
+	.pillar-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+</style>

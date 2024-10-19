@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const teamMembers = [
+  { name: "Jane Doe", role: "Founder & CEO", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?fm=jpg&q=60&w=300&fit=crop" },
+  { name: "John Smith", role: "Chief Security Officer", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?fm=jpg&q=60&w=300&fit=crop" },
+  { name: "Emily Chen", role: "Community Manager", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?fm=jpg&q=60&w=300&fit=crop" }
+];
+---
+
+<Layout title="About Us">
+  <section class="about-hero">
+    <h1>About BizSecurity</h1>
+    <p>Your Community for Small Business Security</p>
+  </section>
+
+  <section class="about-content">
+    <h2>Our Mission</h2>
+    <p>At BizSecurity, we're on a mission to empower small businesses with the knowledge and tools they need to protect themselves in an ever-evolving digital landscape. We believe that every business, regardless of size, deserves access to top-tier security information and resources.</p>
+
+    <h2>What We Do</h2>
+    <p>BizSecurity is more than just a website - we're a thriving community platform dedicated to securing your business and keeping you informed about the most up-to-date information and products in the world of cybersecurity.</p>
+
+    <ul>
+      <li><strong>Expert Content:</strong> Our team of security professionals regularly publishes articles, guides, and best practices tailored for small businesses.</li>
+      <li><strong>Community Forums:</strong> Connect with other business owners, share experiences, and get advice from peers and experts alike.</li>
+      <li><strong>Product Reviews:</strong> Stay informed about the latest security products and services with our unbiased reviews and recommendations.</li>
+      <li><strong>Webinars and Training:</strong> Participate in regular online sessions to enhance your security knowledge and skills.</li>
+      <li><strong>Threat Alerts:</strong> Receive timely notifications about emerging threats that could impact your business.</li>
+    </ul>
+
+    <h2>Our Commitment</h2>
+    <p>We are committed to fostering a community where small businesses can thrive securely. By providing accessible, actionable information and facilitating knowledge sharing, we aim to raise the bar for small business security across the board.</p>
+
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      {teamMembers.map(member => (
+        <div class="team-member">
+          <img src={member.image} alt={member.name} />
+          <h3>{member.name}</h3>
+          <p>{member.role}</p>
+        </div>
+      ))}
+    </div>
+
+    <h2>Join Our Community</h2>
+    <p>Whether you're a seasoned IT professional or just starting to explore the world of cybersecurity, there's a place for you in the BizSecurity community. Join us in our mission to create a safer digital environment for small businesses everywhere.</p>
+
+    <a href="/contact" class="cta-button">Get Involved</a>
+  </section>
+</Layout>
+
+<style>
+  .about-hero {
+    background-color: rgb(var(--accent));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  h2 {
+    color: rgb(var(--accent));
+    margin-top: 2rem;
+  }
+  ul {
+    margin-left: 1.5rem;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .team-member {
+    text-align: center;
+  }
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: rgb(var(--accent));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+  }
+  .cta-button:hover {
+    background-color: rgb(var(--accent-dark));
+  }
+</style>
