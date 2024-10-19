@@ -3,7 +3,14 @@
 <header>
 	<nav>
 		<a href="/" class="logo">
-			<img src="public/BizSecurity-3.png" alt="BizSecurity Logo" width="180" height="40" />
+			<img 
+				src="public/BizSecurity-3.png" 
+				alt="BizSecurity Logo" 
+				width="180" 
+				height="40" 
+				onload="console.log('Logo image loaded successfully')" 
+				onerror="console.error('Failed to load logo image'); this.src='/fallback-logo.png';"
+			/>
 		</a>
 		<button class="menu-toggle" aria-label="Toggle menu">
 			<span></span>
