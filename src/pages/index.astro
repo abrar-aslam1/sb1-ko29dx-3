@@ -320,7 +320,7 @@ const whyJoinReasons = [
 		background-color: white;
 	}
 
-	.insights-grid, .reasons-grid, .benefits-grid {
+	.insights-grid, .benefits-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
@@ -332,7 +332,13 @@ const whyJoinReasons = [
 		gap: 1.5rem;
 	}
 
-	.insight-card, .reason-card, .benefit-card {
+	.reasons-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.insight-card, .benefit-card {
 		background-color: var(--card-background);
 		border-radius: 10px;
 		padding: 2rem;
@@ -356,12 +362,27 @@ const whyJoinReasons = [
 		text-align: center;
 	}
 
-	.insight-card:hover, .pillar-card:hover, .reason-card:hover, .benefit-card:hover {
+	.reason-card {
+		background-color: var(--card-background);
+		border-radius: 15px;
+		padding: 2rem;
+		display: flex;
+		align-items: flex-start;
+		transition: all 0.3s ease;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	}
+
+	.insight-card:hover, .pillar-card:hover, .benefit-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 	}
 
-	.insight-card h3, .reason-card h3, .benefit-card h3 {
+	.reason-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+	}
+
+	.insight-card h3, .benefit-card h3 {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
 		color: var(--primary-color);
@@ -380,10 +401,71 @@ const whyJoinReasons = [
 		display: inline-block;
 	}
 
-	.reason-card i, .benefit-card i {
+	.reason-icon {
+		background-color: var(--secondary-color);
+		color: white;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.reason-icon i {
+		font-size: 1.5rem;
+	}
+
+	.reason-content {
+		flex-grow: 1;
+	}
+
+	.reason-card h3 {
+		font-size: 1.3rem;
+		margin-bottom: 0.5rem;
+		color: var(--primary-color);
+	}
+
+	.reason-card p {
+		font-size: 1rem;
+		color: var(--text-color);
+		opacity: 0.8;
+	}
+
+	.benefit-card i {
 		font-size: 2.5rem;
 		color: var(--secondary-color);
 		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		.reasons-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.reason-card {
+			padding: 1.5rem;
+		}
+
+		.reason-icon {
+			width: 50px;
+			height: 50px;
+			margin-right: 1rem;
+		}
+
+		.reason-icon i {
+			font-size: 1.2rem;
+		}
+
+		.reason-card h3 {
+			font-size: 1.2rem;
+		}
+
+		.reason-card p {
+			font-size: 0.9rem;
+		}
 	}
 
 	.pillar-icon {
