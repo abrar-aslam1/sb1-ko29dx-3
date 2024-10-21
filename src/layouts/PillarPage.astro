@@ -7,10 +7,6 @@ const { frontmatter, faq } = Astro.props;
 
 // Import Metrophobic font
 const fontUrl = 'https://fonts.googleapis.com/css2?family=Metrophobic&display=swap';
----
-
-<Layout title={frontmatter.title} jsonLd={faqSchema}>
-  <link rel="stylesheet" href={fontUrl} />
 
 function getHeroImage(title: string): string {
   const images = {
