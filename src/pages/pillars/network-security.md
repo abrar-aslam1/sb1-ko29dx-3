@@ -31,15 +31,15 @@ By implementing strong network security measures, you create a resilient foundat
 
 <div class="key-aspects">
 
-1. <Icon name="shield-check" /> **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
+1. <Icon name="shield-check" class="icon-shield-check" /> **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
 
-2. <Icon name="lock-closed" /> **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
+2. <Icon name="lock-closed" class="icon-lock-closed" /> **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
 
-3. <Icon name="eye" /> **Intrusion Detection and Prevention Systems (IDS/IPS)**: These systems monitor network traffic for suspicious activity and can automatically block potential threats.
+3. <Icon name="eye" class="icon-eye" /> **Intrusion Detection and Prevention Systems (IDS/IPS)**: These systems monitor network traffic for suspicious activity and can automatically block potential threats.
 
-4. <Icon name="layers" /> **Network Segmentation**: Dividing your network into separate segments can limit the spread of potential breaches.
+4. <Icon name="layers" class="icon-layers" /> **Network Segmentation**: Dividing your network into separate segments can limit the spread of potential breaches.
 
-5. <Icon name="wifi" /> **Secure Wi-Fi**: Implement strong encryption and authentication for your wireless networks. Learn more about [Wireless Security](/pillars/network-security/wireless-security).
+5. <Icon name="wifi" class="icon-wifi" /> **Secure Wi-Fi**: Implement strong encryption and authentication for your wireless networks. Learn more about [Wireless Security](/pillars/network-security/wireless-security).
 
 </div>
 
