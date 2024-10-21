@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
     <header>
       <h1>{frontmatter.title}</h1>
       <p class="post-meta">By {frontmatter.author} on {new Date(frontmatter.date).toLocaleDateString()}</p>
-      {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} class="post-image" />}
+      {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} class="post-image" width="800" height="400" loading="lazy" />}
     </header>
     <div class="content">
       <slot />
