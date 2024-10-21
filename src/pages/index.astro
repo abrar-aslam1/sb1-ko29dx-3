@@ -3,16 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
 const featuredPosts = [
-	{ title: "5 Essential Cybersecurity Tips for Small Businesses", url: "/blog/5-essential-cybersecurity-tips" },
-	{ title: "The Importance of Employee Training in Security", url: "/blog/importance-of-employee-training" },
-	{ title: "How to Create a Disaster Recovery Plan", url: "/blog/create-disaster-recovery-plan" },
+	{ title: "5 Essential Cybersecurity Tips for Small Businesses", url: "/blog/5-essential-cybersecurity-tips", excerpt: "Discover key strategies to protect your small business from cyber threats." },
+	{ title: "The Importance of Employee Training in Security", url: "/blog/importance-of-employee-training", excerpt: "Learn why employee training is crucial for maintaining a strong security posture." },
+	{ title: "How to Create a Disaster Recovery Plan", url: "/blog/create-disaster-recovery-plan", excerpt: "Prepare your business for potential cyber incidents with a solid disaster recovery plan." },
 ];
 
 const securityPillars = [
-	{ title: "Network Security", url: "/pillars/network-security", icon: "🌐" },
-	{ title: "Data Protection", url: "/pillars/data-protection", icon: "🔒" },
-	{ title: "Employee Security Awareness", url: "/pillars/employee-security-awareness", icon: "👥" },
-	{ title: "Physical Security", url: "/pillars/physical-security", icon: "🏢" },
+	{ title: "Network Security", url: "/pillars/network-security", icon: "🌐", description: "Protect your business network from unauthorized access and cyber attacks." },
+	{ title: "Data Protection", url: "/pillars/data-protection", icon: "🔒", description: "Safeguard your sensitive business data from breaches and theft." },
+	{ title: "Employee Security Awareness", url: "/pillars/employee-security-awareness", icon: "👥", description: "Educate your team on best practices for maintaining a secure work environment." },
+	{ title: "Physical Security", url: "/pillars/physical-security", icon: "🏢", description: "Ensure the physical safety of your business assets and premises." },
 ];
 
 const communityBenefits = [
@@ -28,15 +28,24 @@ const whyJoinReasons = [
 	{ title: "Stay Ahead", description: "Keep up with the latest security trends and threats", icon: "fas fa-chart-line" },
 	{ title: "Community Support", description: "Connect with others facing similar challenges", icon: "fas fa-hands-helping" },
 ];
+
+const faqItems = [
+	{ question: "What are the biggest cybersecurity threats for small businesses?", answer: "The most common threats include phishing attacks, ransomware, data breaches, and insider threats. Our community helps you stay informed and protected against these evolving risks." },
+	{ question: "How can I protect my business on a limited budget?", answer: "We offer cost-effective solutions and guidance on prioritizing security measures. Our community also shares tips on maximizing security with limited resources." },
+	{ question: "What should I do if my business experiences a cyber attack?", answer: "Our incident response resources and expert community can guide you through the steps to mitigate damage, recover data, and prevent future attacks." },
+];
+
+const metaDescription = "BizSecurity offers comprehensive cybersecurity solutions for small businesses. Join our community to protect your business from digital threats.";
 ---
 
-<Layout title="Protecting Your Small Business">
+<Layout title="Protecting Your Small Business | BizSecurity" metaDescription={metaDescription}>
 	<main>
 		<section class="hero">
 			<div class="container hero-container">
 				<div class="hero-content">
-					<h1>Secure Your <span class="highlight">Business</span></h1>
+					<h1>Secure Your <span class="highlight">Business</span> in the Digital Age</h1>
 					<p class="subtitle">Join our community of protected small businesses</p>
+					<p class="hero-description">BizSecurity provides comprehensive cybersecurity solutions tailored for small businesses. Our expert-led community helps you navigate the complex world of digital security, ensuring your business stays protected against evolving cyber threats.</p>
 					<div class="cta-container">
 						<a href="/contact" class="cta-button primary">Join BizSecurity</a>
 						<a href="/about" class="cta-button secondary">Learn More</a>
@@ -51,6 +60,13 @@ const whyJoinReasons = [
 			</div>
 		</section>
 
+		<section class="about-us">
+			<div class="container">
+				<h2 class="section-title">Our Mission</h2>
+				<p>At BizSecurity, we're committed to empowering small businesses with enterprise-level cybersecurity solutions. Our mission is to create a safer digital environment for all businesses, regardless of their size or resources.</p>
+			</div>
+		</section>
+
 		<section class="featured-posts">
 			<div class="container">
 				<h2 class="section-title">Latest Security Insights</h2>
@@ -58,7 +74,7 @@ const whyJoinReasons = [
 					{featuredPosts.map(post => (
 						<a href={post.url} class="insight-card">
 							<h3>{post.title}</h3>
-							<p>Discover strategies to protect your business</p>
+							<p>{post.excerpt}</p>
 							<span class="read-more">Read Article</span>
 						</a>
 					))}
@@ -74,6 +90,7 @@ const whyJoinReasons = [
 						<a href={pillar.url} class="pillar-card">
 							<div class="pillar-icon">{pillar.icon}</div>
 							<h3>{pillar.title}</h3>
+							<p>{pillar.description}</p>
 						</a>
 					))}
 				</div>
@@ -108,6 +125,20 @@ const whyJoinReasons = [
 							<i class={benefit.icon}></i>
 							<h3>{benefit.title}</h3>
 							<p>{benefit.description}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="faq">
+			<div class="container">
+				<h2 class="section-title">Frequently Asked Questions</h2>
+				<div class="faq-grid">
+					{faqItems.map(item => (
+						<div class="faq-item">
+							<h3>{item.question}</h3>
+							<p>{item.answer}</p>
 						</div>
 					))}
 				</div>
@@ -199,8 +230,14 @@ const whyJoinReasons = [
 
 	.subtitle {
 		font-size: 1.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		opacity: 0.9;
+	}
+
+	.hero-description {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+		max-width: 600px;
 	}
 
 	.cta-container {
@@ -231,7 +268,31 @@ const whyJoinReasons = [
 		left: 50%;
 		transform: translate(-50%, -50%);
 		font-size: 8rem;
-		color: white; /* Changed to white */
+		color: white;
+	}
+
+	.about-us, .faq {
+		padding: var(--section-spacing) 0;
+		background-color: var(--background-light);
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.faq-item {
+		background-color: var(--card-background);
+		border-radius: 10px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	}
+
+	.faq-item h3 {
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		color: var(--primary-color);
 	}
 
 	@media (max-width: 768px) {
@@ -254,6 +315,11 @@ const whyJoinReasons = [
 
 		.subtitle {
 			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+
+		.hero-description {
+			font-size: 1rem;
 			margin-bottom: 1.5rem;
 		}
 
@@ -397,8 +463,14 @@ const whyJoinReasons = [
 
 	.pillar-card h3 {
 		font-size: 1.2rem;
-		margin: 1rem 0 0;
+		margin: 1rem 0 0.5rem;
 		color: var(--primary-color);
+	}
+
+	.pillar-card p {
+		font-size: 0.9rem;
+		color: var(--text-color);
+		opacity: 0.8;
 	}
 
 	.read-more, .pillar-link {
@@ -496,6 +568,10 @@ const whyJoinReasons = [
 
 		.pillar-card h3 {
 			font-size: 1rem;
+		}
+
+		.pillar-card p {
+			font-size: 0.8rem;
 		}
 	}
 
