@@ -1,10 +1,12 @@
 ---
 import Layout from './Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
+  <Breadcrumb path={Astro.url.pathname} />
   <article class="sub-pillar-page">
     <header>
       <h1>{frontmatter.title}</h1>
