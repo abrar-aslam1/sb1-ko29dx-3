@@ -23,3 +23,20 @@ For more on creating a comprehensive data protection strategy, check out our [Ho
 Remember, data protection is an ongoing process. Regularly review and update your data protection measures to stay ahead of evolving threats.
 
 For cloud-specific data protection strategies, check out our [Cloud Security](/pillars/cloud-security) pillar.
+
+## Frequently Asked Questions
+
+### Q: What types of data should my small business prioritize protecting?
+A: Prioritize protecting sensitive customer information, financial data, proprietary business information, and employee records. Any data that could harm your business or customers if compromised should be a top priority.
+
+### Q: How often should I back up my business data?
+A: The frequency of backups depends on how often your data changes and how much data loss your business can tolerate. For many small businesses, daily backups are recommended, with more frequent backups for critical, rapidly changing data.
+
+### Q: What's the difference between data backup and data replication?
+A: Data backup creates a copy of your data that can be restored if needed, typically at specific points in time. Data replication continuously copies data to another location in real-time, providing faster recovery but potentially replicating errors or corruptions.
+
+### Q: How can I ensure my employees are following data protection best practices?
+A: Implement clear data protection policies, provide regular training, use access controls to limit data access based on job roles, and consider using monitoring tools to track data access and usage.
+
+### Q: What should I do if I suspect a data breach has occurred?
+A: Act quickly: isolate affected systems, assess the scope of the breach, notify relevant parties (including customers if their data was affected), and consider engaging a cybersecurity expert. Have an incident response plan ready in advance to guide your actions.

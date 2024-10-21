@@ -50,3 +50,20 @@ A: A firewall acts as a barrier between your internal network and external netwo
 A: To protect against ransomware, maintain regular backups, keep all software updated, use strong spam filters, and train employees to recognize phishing attempts. Also, consider implementing application whitelisting and network segmentation.
 
 For more detailed answers and personalized advice, don't hesitate to [contact our team](/contact).
+
+## Frequently Asked Questions
+
+### Q: What are the most common network security threats for small businesses?
+A: Common threats include malware, phishing attacks, insider threats, and unsecured Wi-Fi networks. It's important to have a comprehensive security strategy that addresses these and other potential vulnerabilities.
+
+### Q: How often should I update my network security measures?
+A: Network security should be an ongoing process. Regularly update software and firmware, review your security policies at least quarterly, and conduct penetration testing annually.
+
+### Q: Do I need a dedicated IT staff for network security?
+A: While having dedicated IT staff can be beneficial, it's not always necessary for small businesses. You can start with managed security services or outsourced IT support to ensure your network is protected.
+
+### Q: What's the difference between a firewall and antivirus software?
+A: A firewall acts as a barrier between your internal network and external networks, controlling incoming and outgoing network traffic. Antivirus software, on the other hand, detects, prevents, and removes malicious software from your devices.
+
+### Q: How can I protect my business from ransomware attacks?
+A: To protect against ransomware, maintain regular backups, keep all software updated, use strong spam filters, and train employees to recognize phishing attempts. Also, consider implementing application whitelisting and network segmentation.

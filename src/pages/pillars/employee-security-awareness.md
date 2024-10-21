@@ -21,3 +21,20 @@ Your employees are your first line of defense against security threats. Here's h
 For more on the importance of employee training, check out our blog post on [The Importance of Employee Training in Security](/blog/importance-of-employee-training).
 
 Remember, creating a security-aware culture is an ongoing process. Regularly update your training programs to address new and evolving threats.
+
+## Frequently Asked Questions
+
+### Q: How often should I conduct security awareness training for my employees?
+A: At minimum, conduct comprehensive training annually, but also provide shorter, more frequent updates (e.g., monthly or quarterly) to keep security top-of-mind and address new threats.
+
+### Q: What topics should be covered in security awareness training?
+A: Key topics include password security, phishing awareness, safe internet browsing, social engineering tactics, physical security practices, and your company's specific security policies and procedures.
+
+### Q: How can I make security awareness training more engaging for employees?
+A: Use a variety of training methods such as interactive online courses, simulations, gamification, and real-world examples. Consider rewarding employees who demonstrate good security practices.
+
+### Q: How do I measure the effectiveness of our security awareness program?
+A: Use metrics such as the results of phishing simulations, the number of reported security incidents, and pre- and post-training assessments. Also, monitor for a reduction in security breaches over time.
+
+### Q: What should employees do if they suspect a security breach?
+A: Employees should know to immediately report any suspected breaches to the designated security team or IT department. Provide clear, easily accessible reporting procedures and assure employees they won't be penalized for reporting potential issues.

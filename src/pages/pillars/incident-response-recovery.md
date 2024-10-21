@@ -21,3 +21,20 @@ Being prepared for security incidents is crucial. Here's how to develop an effec
 For more details on creating a disaster recovery plan, check out our blog post on [How to Create a Disaster Recovery Plan](/blog/create-disaster-recovery-plan).
 
 Remember, quick and effective incident response can significantly minimize the impact of a security breach on your business.
+
+## Frequently Asked Questions
+
+### Q: What should be included in an incident response plan?
+A: An incident response plan should include roles and responsibilities, incident classification criteria, step-by-step response procedures, communication protocols, and contact information for key personnel and external resources.
+
+### Q: How quickly should we respond to a security incident?
+A: Response time can be critical. Aim to begin your response immediately upon detection. Your incident response plan should include timeframes for different types of incidents and severity levels.
+
+### Q: Should we inform our customers about a security breach?
+A: In many cases, yes. Many jurisdictions have laws requiring notification of affected individuals. Even when not legally required, transparency can help maintain customer trust. Consult with legal counsel to determine your obligations.
+
+### Q: How often should we test our incident response plan?
+A: Conduct a full test or simulation at least annually. Additionally, perform more frequent tabletop exercises (e.g., quarterly) to keep the team prepared and identify any gaps in the plan.
+
+### Q: What's the difference between incident response and disaster recovery?
+A: Incident response focuses on detecting, responding to, and mitigating the impact of a security incident. Disaster recovery is broader, focusing on restoring business operations after any type of major disruption, including but not limited to security incidents.
