@@ -5,6 +5,13 @@ import Icon from '../components/Icon.astro';
 
 const { frontmatter } = Astro.props;
 
+// Import Metrophobic font
+const fontUrl = 'https://fonts.googleapis.com/css2?family=Metrophobic&display=swap';
+---
+
+<Layout title={frontmatter.title}>
+  <link rel="stylesheet" href={fontUrl} />
+
 function getHeroImage(title: string): string {
   const images = {
     'Wireless Security': 'https://images.unsplash.com/photo-1562408590-e32931084e23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=900&q=80',
@@ -50,6 +57,16 @@ function getHeroImage(title: string): string {
 </Layout>
 
 <style>
+  /* Apply Metrophobic font to body text */
+  :global(body) {
+    font-family: 'Metrophobic', sans-serif;
+  }
+
+  /* Keep Poppins for headings */
+  :global(h1, h2, h3, h4, h5, h6) {
+    font-family: 'Poppins', sans-serif;
+  }
+
   .hero {
     position: relative;
     height: 400px;

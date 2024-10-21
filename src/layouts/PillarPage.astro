@@ -5,6 +5,13 @@ import Icon from '../components/Icon.astro';
 
 const { frontmatter, faq } = Astro.props;
 
+// Import Metrophobic font
+const fontUrl = 'https://fonts.googleapis.com/css2?family=Metrophobic&display=swap';
+---
+
+<Layout title={frontmatter.title} jsonLd={faqSchema}>
+  <link rel="stylesheet" href={fontUrl} />
+
 function getHeroImage(title: string): string {
   const images = {
     'Network Security': 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&h=900&q=80',
@@ -75,6 +82,16 @@ const faqSchema = faq ? JSON.stringify({
 </Layout>
 
 <style>
+  /* Apply Metrophobic font to body text */
+  :global(body) {
+    font-family: 'Metrophobic', sans-serif;
+  }
+
+  /* Keep Poppins for headings */
+  :global(h1, h2, h3, h4, h5, h6) {
+    font-family: 'Poppins', sans-serif;
+  }
+
   .hero {
     position: relative;
     height: 400px;
