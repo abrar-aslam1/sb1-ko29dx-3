@@ -2,6 +2,7 @@
 import Layout from './Layout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import Icon from '../components/Icon.astro';
+import '../styles/icon-colors.css';
 
 const { frontmatter, faq } = Astro.props;
 export interface Props {
@@ -67,6 +68,7 @@ const faqSchema = faq ? JSON.stringify({
           height: 1.5em;
           vertical-align: middle;
           margin-right: 0.5em;
+          fill: currentColor;
         }
       </style>
       {faq && (
