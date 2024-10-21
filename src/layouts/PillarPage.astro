@@ -21,7 +21,11 @@ const faqSchema = faq ? JSON.stringify({
 
 <Layout title={frontmatter.title} jsonLd={faqSchema}>
   <div class="hero">
-    <img src={frontmatter.heroImage || '/default-hero.jpg'} alt={frontmatter.title} class="hero-image" />
+    <img 
+      src={frontmatter.heroImage || 'https://source.unsplash.com/random/1600x900/?cybersecurity'} 
+      alt={frontmatter.title} 
+      class="hero-image" 
+    />
     <div class="hero-content">
       <h1>{frontmatter.title}</h1>
       {frontmatter.subtitle && <p class="subtitle">{frontmatter.subtitle}</p>}
