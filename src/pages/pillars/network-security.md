@@ -2,6 +2,7 @@
 layout: ../../layouts/PillarPage.astro
 title: Network Security
 image: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG5ldHdvcmslMjBzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D
+import Icon from '../../components/Icon.astro';
 faq:
   - question: What is the first step in improving my small business's network security?
     answer: The first step is to conduct a thorough network security assessment. This will help you identify vulnerabilities and prioritize your security efforts.
@@ -31,15 +32,15 @@ By implementing strong network security measures, you create a resilient foundat
 
 <div class="key-aspects">
 
-1. **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
+1. <Icon name="shield" /> **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
 
-2. **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
+2. <Icon name="lock" /> **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
 
-3. **Intrusion Detection and Prevention Systems (IDS/IPS)**: These systems monitor network traffic for suspicious activity and can automatically block potential threats.
+3. <Icon name="eye" /> **Intrusion Detection and Prevention Systems (IDS/IPS)**: These systems monitor network traffic for suspicious activity and can automatically block potential threats.
 
-4. **Network Segmentation**: Dividing your network into separate segments can limit the spread of potential breaches.
+4. <Icon name="layers" /> **Network Segmentation**: Dividing your network into separate segments can limit the spread of potential breaches.
 
-5. **Secure Wi-Fi**: Implement strong encryption and authentication for your wireless networks. Learn more about [Wireless Security](/pillars/network-security/wireless-security).
+5. <Icon name="wifi" /> **Secure Wi-Fi**: Implement strong encryption and authentication for your wireless networks. Learn more about [Wireless Security](/pillars/network-security/wireless-security).
 
 </div>
 
