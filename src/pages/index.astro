@@ -31,169 +31,146 @@ const whyJoinReasons = [
 ---
 
 <Layout title="Protecting Your Small Business">
-	<section class="hero">
-		<div class="hero-content">
-			<h1>Secure Your Business,<br><span class="highlight">Join Our Community</span></h1>
-			<p>Empowering small businesses with expert cybersecurity knowledge and support.</p>
-			<div class="cta-container">
-				<a href="/contact" class="cta-button primary">Join BizSecurity Today</a>
-				<a href="/about" class="cta-button secondary">Learn More</a>
+	<main>
+		<section class="hero">
+			<div class="container">
+				<div class="hero-content">
+					<h1>Secure Your Business</h1>
+					<p class="subtitle">Join our community of protected small businesses</p>
+					<div class="cta-container">
+						<a href="/contact" class="cta-button primary">Join BizSecurity</a>
+						<a href="/about" class="cta-button secondary">Learn More</a>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="hero-image">
-			<img src="/BizSecurity-3.png" alt="BizSecurity Protection" />
-		</div>
-	</section>
+		</section>
 
-	<section class="featured-posts">
-		<h2 class="section-title">Latest Security Insights</h2>
-		<div class="insights-grid">
-			{featuredPosts.map(post => (
-				<a href={post.url} class="insight-card">
-					<h3>{post.title}</h3>
-					<p>Read more about protecting your business</p>
-					<span class="read-more">Read More &rarr;</span>
-				</a>
-			))}
-		</div>
-	</section>
-
-	<section class="security-pillars">
-		<h2 class="section-title">Core Security Pillars</h2>
-		<div class="pillar-grid">
-			{securityPillars.map(pillar => (
-				<div class="pillar-card">
-					<div class="pillar-icon">{pillar.icon}</div>
-					<h3>{pillar.title}</h3>
-					<a href={pillar.url} class="pillar-link">Explore</a>
+		<section class="featured-posts">
+			<div class="container">
+				<h2 class="section-title">Latest Security Insights</h2>
+				<div class="insights-grid">
+					{featuredPosts.map(post => (
+						<a href={post.url} class="insight-card">
+							<h3>{post.title}</h3>
+							<p>Discover strategies to protect your business</p>
+							<span class="read-more">Read Article</span>
+						</a>
+					))}
 				</div>
-			))}
-		</div>
-	</section>
+			</div>
+		</section>
 
-	<section class="why-join">
-		<h2 class="section-title">Why Join BizSecurity?</h2>
-		<div class="why-join-grid">
-			{whyJoinReasons.map(reason => (
-				<div class="reason-card">
-					<i class={reason.icon}></i>
-					<h3>{reason.title}</h3>
-					<p>{reason.description}</p>
+		<section class="security-pillars">
+			<div class="container">
+				<h2 class="section-title">Core Security Pillars</h2>
+				<div class="pillar-grid">
+					{securityPillars.map(pillar => (
+						<a href={pillar.url} class="pillar-card">
+							<div class="pillar-icon">{pillar.icon}</div>
+							<h3>{pillar.title}</h3>
+							<span class="pillar-link">Learn More</span>
+						</a>
+					))}
 				</div>
-			))}
-		</div>
-	</section>
+			</div>
+		</section>
 
-	<section class="community-benefits">
-		<h2 class="section-title">Benefits of Our Community</h2>
-		<div class="benefits-grid">
-			{communityBenefits.map(benefit => (
-				<div class="benefit-card">
-					<i class={benefit.icon}></i>
-					<h3>{benefit.title}</h3>
-					<p>{benefit.description}</p>
+		<section class="why-join">
+			<div class="container">
+				<h2 class="section-title">Why Join BizSecurity?</h2>
+				<div class="reasons-grid">
+					{whyJoinReasons.map(reason => (
+						<div class="reason-card">
+							<i class={reason.icon}></i>
+							<h3>{reason.title}</h3>
+							<p>{reason.description}</p>
+						</div>
+					))}
 				</div>
-			))}
-		</div>
-	</section>
+			</div>
+		</section>
 
-	<section class="cta-section">
-		<div class="cta-content">
-			<h2>Ready to Secure Your Business?</h2>
-			<p>Join BizSecurity today and take the first step towards comprehensive cybersecurity.</p>
-			<a href="/contact" class="cta-button">Get Started</a>
-		</div>
-	</section>
+		<section class="community-benefits">
+			<div class="container">
+				<h2 class="section-title">Community Benefits</h2>
+				<div class="benefits-grid">
+					{communityBenefits.map(benefit => (
+						<div class="benefit-card">
+							<i class={benefit.icon}></i>
+							<h3>{benefit.title}</h3>
+							<p>{benefit.description}</p>
+						</div>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h2>Ready to Secure Your Business?</h2>
+					<p>Join BizSecurity today and take the first step towards comprehensive cybersecurity.</p>
+					<a href="/contact" class="cta-button">Get Started</a>
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
 
 <style>
 	:root {
-		--accent-color: #4a90e2;
-		--accent-dark: #3a7bd5;
+		--primary-color: #2c3e50;
+		--secondary-color: #3498db;
+		--accent-color: #e74c3c;
 		--text-color: #333;
-		--background-light: #f0f4f8;
+		--background-light: #ecf0f1;
 		--card-background: #ffffff;
-		--section-spacing: 6rem;
+		--section-spacing: 5rem;
 	}
 	
 	body {
-		font-family: 'Arial', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		line-height: 1.6;
 		color: var(--text-color);
-		background-color: #e6edf5;
+		background-color: var(--background-light);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
 	}
 
 	.hero {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 4rem 2rem;
-		background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-		overflow: hidden;
-		position: relative;
+		background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+		color: white;
+		padding: 6rem 0;
+		text-align: center;
 	}
 
-	.hero-content {
-		flex: 1;
-		max-width: 600px;
-		z-index: 2;
-	}
-
-	.hero-image {
-		flex: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1;
-	}
-
-	.hero-image img {
-		max-width: 100%;
-		height: auto;
-		filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
-		animation: float 6s ease-in-out infinite;
-	}
-
-	h1 {
+	.hero h1 {
 		font-size: 3.5rem;
 		margin-bottom: 1rem;
-		color: var(--text-color);
-		line-height: 1.2;
+		font-weight: 700;
 	}
 
-	.highlight {
-		color: var(--accent-color);
-	}
-
-	.hero p {
-		font-size: 1.25rem;
+	.subtitle {
+		font-size: 1.5rem;
 		margin-bottom: 2rem;
-		color: var(--text-color);
-		opacity: 0.8;
+		opacity: 0.9;
 	}
 
 	.cta-container {
 		display: flex;
+		justify-content: center;
 		gap: 1rem;
-	}
-
-	@keyframes float {
-		0% {
-			transform: translatey(0px);
-		}
-		50% {
-			transform: translatey(-20px);
-		}
-		100% {
-			transform: translatey(0px);
-		}
 	}
 
 	.section-title {
 		font-size: 2.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 		text-align: center;
-		color: var(--accent-color);
+		color: var(--primary-color);
 	}
 
 	.cta-button {
@@ -204,7 +181,6 @@ const whyJoinReasons = [
 		font-weight: bold;
 		font-size: 1rem;
 		transition: all 0.3s ease;
-		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 	}
 
 	.cta-button.primary {
@@ -213,9 +189,9 @@ const whyJoinReasons = [
 	}
 
 	.cta-button.secondary {
-		background-color: white;
-		color: var(--accent-color);
-		border: 2px solid var(--accent-color);
+		background-color: transparent;
+		color: white;
+		border: 2px solid white;
 	}
 
 	.cta-button:hover {
@@ -223,129 +199,56 @@ const whyJoinReasons = [
 		box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 	}
 
-	.cta-button.primary:hover {
-		background-color: var(--accent-dark);
-	}
-
-	.cta-button.secondary:hover {
-		background-color: var(--accent-color);
-		color: white;
-	}
-
 	.featured-posts, .security-pillars, .why-join, .community-benefits {
-		padding: var(--section-spacing) 2rem;
-		background-color: var(--background-light);
+		padding: var(--section-spacing) 0;
+		background-color: white;
 	}
 
-	.insights-grid {
+	.insights-grid, .pillar-grid, .reasons-grid, .benefits-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
 	}
 
-	.insight-card {
+	.insight-card, .pillar-card, .reason-card, .benefit-card {
 		background-color: var(--card-background);
-		border-radius: 15px;
+		border-radius: 10px;
 		padding: 2rem;
 		text-decoration: none;
 		color: var(--text-color);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 100%;
 		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 	}
 
-	.insight-card:hover {
+	.insight-card:hover, .pillar-card:hover, .reason-card:hover, .benefit-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 	}
 
-	.insight-card h3 {
+	.insight-card h3, .pillar-card h3, .reason-card h3, .benefit-card h3 {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
-		color: var(--accent-color);
+		color: var(--primary-color);
 	}
 
-	.insight-card p {
-		font-size: 1rem;
-		margin-bottom: 1.5rem;
-	}
-
-	.read-more {
-		color: var(--accent-color);
-		font-weight: bold;
-		align-self: flex-start;
-		transition: transform 0.3s ease;
-	}
-
-	.insight-card:hover .read-more {
-		transform: translateX(5px);
-	}
-
-	.pillar-grid, .benefits-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
-
-	.pillar-card, .benefit-card, .reason-card {
-		background-color: var(--card-background);
-		border-radius: 15px;
-		padding: 2rem;
-		text-align: center;
-		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.pillar-card:hover, .benefit-card:hover, .reason-card:hover {
-		transform: translateY(-10px);
-		box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-	}
-
-	.pillar-icon, .benefit-card i, .reason-card i {
-		font-size: 3rem;
-		color: var(--accent-color);
-		margin-bottom: 1rem;
-	}
-
-	.pillar-link {
-		display: inline-block;
-		color: var(--accent-color);
-		text-decoration: none;
+	.read-more, .pillar-link {
+		color: var(--secondary-color);
 		font-weight: bold;
 		margin-top: 1rem;
-		transition: color 0.3s ease;
+		display: inline-block;
 	}
 
-	.pillar-link:hover {
-		color: var(--accent-dark);
-	}
-
-	.why-join {
-		background-color: var(--background-light);
-	}
-
-	.why-join-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
+	.pillar-icon, .reason-card i, .benefit-card i {
+		font-size: 2.5rem;
+		color: var(--secondary-color);
+		margin-bottom: 1rem;
 	}
 
 	.cta-section {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
-		background-size: cover;
-		background-position: center;
+		background-color: var(--primary-color);
 		color: white;
 		text-align: center;
-		padding: 6rem 2rem;
-		position: relative;
-	}
-
-	.cta-content {
-		position: relative;
-		z-index: 2;
+		padding: 6rem 0;
 	}
 
 	.cta-section h2 {
@@ -356,59 +259,33 @@ const whyJoinReasons = [
 	.cta-section p {
 		font-size: 1.2rem;
 		margin-bottom: 2rem;
+		opacity: 0.9;
 	}
 
 	@media (max-width: 768px) {
 		.hero {
-			flex-direction: column;
-			padding: 3rem 1rem;
+			padding: 4rem 0;
 		}
 
-		.hero-content {
-			text-align: center;
-			margin-bottom: 2rem;
-		}
-
-		h1 {
+		.hero h1 {
 			font-size: 2.5rem;
 		}
 
-		.hero p {
-			font-size: 1.1rem;
-		}
-
-		.cta-container {
-			justify-content: center;
-		}
-
-		.hero-image {
-			order: -1;
-			margin-bottom: 2rem;
-		}
-
-		.hero-image img {
-			max-width: 80%;
+		.subtitle {
+			font-size: 1.2rem;
 		}
 
 		.section-title {
-			font-size: 1.8rem;
-		}
-
-		.why-join-content {
-			flex-direction: column;
-		}
-
-		.card-grid, .pillar-grid, .benefits-grid, .why-join-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.featured-posts, .security-pillars, .why-join, .community-benefits {
-			padding: 3rem 1rem;
+			font-size: 2rem;
 		}
 
 		.cta-button {
 			padding: 0.8rem 1.5rem;
 			font-size: 0.9rem;
+		}
+
+		.featured-posts, .security-pillars, .why-join, .community-benefits {
+			padding: 3rem 0;
 		}
 	}
 </style>
