@@ -106,7 +106,7 @@ const whyJoinReasons = [
 		--accent-color: #4a90e2;
 		--accent-dark: #3a7bd5;
 		--text-color: #333;
-		--background-light: #f8f9fa;
+		--background-light: #f0f4f8;
 		--card-background: #ffffff;
 		--section-spacing: 6rem;
 	}
@@ -115,27 +115,17 @@ const whyJoinReasons = [
 		font-family: 'Arial', sans-serif;
 		line-height: 1.6;
 		color: var(--text-color);
+		background-color: #e6edf5;
 	}
 
 	.hero {
-		background-image: url('https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
 		background-size: cover;
 		background-position: center;
 		color: white;
 		padding: 8rem 2rem;
 		text-align: center;
 		position: relative;
-	}
-
-	.hero::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.5);
-		z-index: 1;
 	}
 
 	.hero-content {
@@ -183,6 +173,7 @@ const whyJoinReasons = [
 
 	.featured-posts, .security-pillars, .why-join, .community-benefits {
 		padding: var(--section-spacing) 2rem;
+		background-color: var(--background-light);
 	}
 
 	.card-grid, .pillar-grid, .benefits-grid {
@@ -225,7 +216,7 @@ const whyJoinReasons = [
 	}
 
 	.why-join {
-		background-color: var(--background-light);
+		background-color: #d9e6f2;
 	}
 
 	.why-join-content {
@@ -252,24 +243,13 @@ const whyJoinReasons = [
 	}
 
 	.cta-section {
-		background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
 		background-size: cover;
 		background-position: center;
 		color: white;
 		text-align: center;
 		padding: 6rem 2rem;
 		position: relative;
-	}
-
-	.cta-section::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.6);
-		z-index: 1;
 	}
 
 	.cta-content {
