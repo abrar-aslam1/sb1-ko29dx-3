@@ -2,7 +2,6 @@
 layout: ../../layouts/PillarPage.astro
 title: Network Security
 image: https://images.unsplash.com/photo-1544197150-b99a580bb7a8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG5ldHdvcmslMjBzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D
-import Icon from '../../components/Icon.astro';
 faq:
   - question: What is the first step in improving my small business's network security?
     answer: The first step is to conduct a thorough network security assessment. This will help you identify vulnerabilities and prioritize your security efforts.
@@ -15,6 +14,8 @@ faq:
   - question: How can I protect my business from ransomware attacks?
     answer: To protect against ransomware, maintain regular backups, keep all software updated, use strong spam filters, and train employees to recognize phishing attempts. Also, consider implementing application whitelisting and network segmentation.
 ---
+
+import Icon from '../../components/Icon.astro';
 
 # Network Security for Small Businesses
 
