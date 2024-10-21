@@ -316,13 +316,19 @@ const whyJoinReasons = [
 		background-color: white;
 	}
 
-	.insights-grid, .pillar-grid, .reasons-grid, .benefits-grid {
+	.insights-grid, .reasons-grid, .benefits-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
 	}
 
-	.insight-card, .pillar-card, .reason-card, .benefit-card {
+	.pillar-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.insight-card, .reason-card, .benefit-card {
 		background-color: var(--card-background);
 		border-radius: 10px;
 		padding: 2rem;
@@ -332,14 +338,34 @@ const whyJoinReasons = [
 		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 	}
 
+	.pillar-card {
+		background-color: var(--card-background);
+		border-radius: 15px;
+		padding: 1.5rem;
+		text-decoration: none;
+		color: var(--text-color);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
 	.insight-card:hover, .pillar-card:hover, .reason-card:hover, .benefit-card:hover {
 		transform: translateY(-5px);
 		box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 	}
 
-	.insight-card h3, .pillar-card h3, .reason-card h3, .benefit-card h3 {
+	.insight-card h3, .reason-card h3, .benefit-card h3 {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
+		color: var(--primary-color);
+	}
+
+	.pillar-card h3 {
+		font-size: 1.2rem;
+		margin: 1rem 0 0;
 		color: var(--primary-color);
 	}
 
@@ -350,10 +376,34 @@ const whyJoinReasons = [
 		display: inline-block;
 	}
 
-	.pillar-icon, .reason-card i, .benefit-card i {
+	.reason-card i, .benefit-card i {
 		font-size: 2.5rem;
 		color: var(--secondary-color);
 		margin-bottom: 1rem;
+	}
+
+	.pillar-icon {
+		font-size: 3rem;
+		color: var(--secondary-color);
+		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.pillar-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.pillar-card {
+			padding: 1rem;
+		}
+
+		.pillar-icon {
+			font-size: 2.5rem;
+		}
+
+		.pillar-card h3 {
+			font-size: 1rem;
+		}
 	}
 
 	.cta-section {
