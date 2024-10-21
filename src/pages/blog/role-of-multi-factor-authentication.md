@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: "The Role of Multi-Factor Authentication in Business Security"
 author: BizSecurity Team
 date: 2023-07-29
-image: /images/multi-factor-authentication.jpg
+image: https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags: [cybersecurity, multi-factor-authentication, MFA, access-control]
 ---
 

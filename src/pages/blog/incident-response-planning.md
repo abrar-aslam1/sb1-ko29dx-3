@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: "Incident Response Planning: Preparing for the Inevitable"
 author: BizSecurity Team
 date: 2023-08-19
-image: /images/incident-response-planning.jpg
+image: https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags: [cybersecurity, incident-response, disaster-recovery, business-continuity]
 ---
 

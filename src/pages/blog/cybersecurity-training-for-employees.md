@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: "Cybersecurity Training for Employees: Your First Line of Defense"
 author: BizSecurity Team
 date: 2023-08-05
-image: /images/employee-cybersecurity-training.jpg
+image: https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags: [cybersecurity, employee-training, security-awareness, human-factor]
 ---
 

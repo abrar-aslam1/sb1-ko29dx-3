@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: "Cybersecurity on a Budget: Cost-Effective Solutions for Small Businesses"
 author: BizSecurity Team
 date: 2023-07-15
-image: /images/cybersecurity-budget.jpg
+image: https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags: [cybersecurity, small-business, budget, cost-effective]
 ---
 

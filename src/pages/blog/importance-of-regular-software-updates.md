@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: "The Importance of Regular Software Updates: Keeping Your Business Secure"
 author: BizSecurity Team
 date: 2023-07-22
-image: /images/software-updates.jpg
+image: https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 tags: [cybersecurity, software-updates, patch-management, business-security]
 ---
 
