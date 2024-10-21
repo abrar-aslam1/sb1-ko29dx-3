@@ -4,6 +4,10 @@ import Breadcrumb from '../components/Breadcrumb.astro';
 import Icon from '../components/Icon.astro';
 
 const { frontmatter, faq } = Astro.props;
+export interface Props {
+  frontmatter: any;
+  faq?: any[];
+}
 
 // Import Metrophobic font
 const fontUrl = 'https://fonts.googleapis.com/css2?family=Metrophobic&display=swap';
@@ -57,6 +61,14 @@ const faqSchema = faq ? JSON.stringify({
       <div class="content">
         <slot />
       </div>
+      <style is:global>
+        .content :global(svg) {
+          width: 1.5em;
+          height: 1.5em;
+          vertical-align: middle;
+          margin-right: 0.5em;
+        }
+      </style>
       {faq && (
         <section class="faq">
           <h2><Icon name="question" /> Frequently Asked Questions</h2>

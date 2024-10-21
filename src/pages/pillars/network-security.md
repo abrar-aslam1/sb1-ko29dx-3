@@ -15,8 +15,6 @@ faq:
     answer: To protect against ransomware, maintain regular backups, keep all software updated, use strong spam filters, and train employees to recognize phishing attempts. Also, consider implementing application whitelisting and network segmentation.
 ---
 
-import Icon from '../../components/Icon.astro';
-
 # Network Security for Small Businesses
 
 <div class="card">
