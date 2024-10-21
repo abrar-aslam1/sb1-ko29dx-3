@@ -17,11 +17,15 @@ faq:
 
 # Network Security for Small Businesses
 
+<div class="card">
+
 Network security is a critical component of your overall business security strategy. It involves protecting your digital infrastructure from unauthorized access, misuse, modification, or denial of service. In today's interconnected world, where cyber threats are constantly evolving, robust network security is essential for safeguarding your business assets, customer data, and reputation.
 
 Effective network security encompasses a range of technologies, processes, and practices designed to defend against, detect, and respond to potential threats. It not only protects your sensitive information from external attackers but also manages internal risks, ensuring that your employees can work safely and efficiently without compromising your business's integrity.
 
 By implementing strong network security measures, you create a resilient foundation for your business operations, foster trust with your customers, and comply with various data protection regulations. Remember, in the digital age, your network's security is directly linked to your business's overall health and longevity.
+
+</div>
 
 ## Key Aspects of Network Security
 
