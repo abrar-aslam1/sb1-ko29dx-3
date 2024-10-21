@@ -31,9 +31,9 @@ By implementing strong network security measures, you create a resilient foundat
 
 <div class="key-aspects">
 
-1. <Icon name="shield" /> **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
+1. <Icon name="shield-check" /> **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
 
-2. <Icon name="lock" /> **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
+2. <Icon name="lock-closed" /> **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
 
 3. <Icon name="eye" /> **Intrusion Detection and Prevention Systems (IDS/IPS)**: These systems monitor network traffic for suspicious activity and can automatically block potential threats.
 
