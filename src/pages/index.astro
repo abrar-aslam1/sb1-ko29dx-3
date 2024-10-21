@@ -33,13 +33,19 @@ const whyJoinReasons = [
 <Layout title="Protecting Your Small Business">
 	<main>
 		<section class="hero">
-			<div class="container">
+			<div class="container hero-container">
 				<div class="hero-content">
-					<h1>Secure Your Business</h1>
+					<h1>Secure Your <span class="highlight">Business</span></h1>
 					<p class="subtitle">Join our community of protected small businesses</p>
 					<div class="cta-container">
 						<a href="/contact" class="cta-button primary">Join BizSecurity</a>
 						<a href="/about" class="cta-button secondary">Learn More</a>
+					</div>
+				</div>
+				<div class="hero-graphic">
+					<div class="circle"></div>
+					<div class="shield">
+						<i class="fas fa-shield-alt"></i>
 					</div>
 				</div>
 			</div>
@@ -145,13 +151,30 @@ const whyJoinReasons = [
 		background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 		color: white;
 		padding: 6rem 0;
-		text-align: center;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.hero-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.hero-content {
+		flex: 1;
+		text-align: left;
 	}
 
 	.hero h1 {
-		font-size: 3.5rem;
+		font-size: 4rem;
 		margin-bottom: 1rem;
 		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		color: var(--accent-color);
 	}
 
 	.subtitle {
@@ -162,8 +185,61 @@ const whyJoinReasons = [
 
 	.cta-container {
 		display: flex;
-		justify-content: center;
 		gap: 1rem;
+	}
+
+	.hero-graphic {
+		flex: 1;
+		position: relative;
+		height: 400px;
+	}
+
+	.circle {
+		width: 350px;
+		height: 350px;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.shield {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 8rem;
+		color: var(--accent-color);
+	}
+
+	@media (max-width: 768px) {
+		.hero-container {
+			flex-direction: column;
+		}
+
+		.hero-content {
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+
+		.hero h1 {
+			font-size: 3rem;
+		}
+
+		.hero-graphic {
+			height: 300px;
+		}
+
+		.circle {
+			width: 250px;
+			height: 250px;
+		}
+
+		.shield {
+			font-size: 6rem;
+		}
 	}
 
 	.section-title {
