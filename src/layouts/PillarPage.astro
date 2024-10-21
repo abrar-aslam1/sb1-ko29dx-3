@@ -20,73 +20,107 @@ const faqSchema = faq ? JSON.stringify({
 ---
 
 <Layout title={frontmatter.title} jsonLd={faqSchema}>
-  <Breadcrumb path={Astro.url.pathname} />
-  <article class="pillar-page">
-    <header>
+  <div class="hero" style={`background-image: url(${frontmatter.heroImage || '/default-hero.jpg'})`}>
+    <div class="hero-content">
       <h1>{frontmatter.title}</h1>
-      {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title} class="pillar-image" />}
-    </header>
-    <div class="content">
-      <slot />
+      {frontmatter.subtitle && <p class="subtitle">{frontmatter.subtitle}</p>}
     </div>
-    {faq && (
-      <section class="faq">
-        <h2><Icon name="question" /> Frequently Asked Questions</h2>
-        {faq.map((item, index) => (
-          <details class="faq-item">
-            <summary>{item.question}</summary>
-            <p>{item.answer}</p>
-          </details>
-        ))}
+  </div>
+  <div class="container">
+    <Breadcrumb path={Astro.url.pathname} />
+    <article class="pillar-page">
+      {frontmatter.introduction && (
+        <section class="introduction">
+          <p>{frontmatter.introduction}</p>
+        </section>
+      )}
+      <div class="content">
+        <slot />
+      </div>
+      {faq && (
+        <section class="faq">
+          <h2><Icon name="question" /> Frequently Asked Questions</h2>
+          {faq.map((item, index) => (
+            <details class="faq-item">
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </section>
+      )}
+      <section class="cta">
+        <h2><Icon name="rocket" /> Ready to enhance your cybersecurity?</h2>
+        <p>Contact us today for a free consultation.</p>
+        <a href="/contact" class="cta-button">Get Started</a>
       </section>
-    )}
-    <section class="cta">
-      <h2><Icon name="rocket" /> Ready to enhance your cybersecurity?</h2>
-      <p>Contact us today for a free consultation.</p>
-      <a href="/contact" class="cta-button">Get Started</a>
-    </section>
-  </article>
+    </article>
+  </div>
 </Layout>
 
 <style>
+  .hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+  }
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  .subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    opacity: 0.9;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 5vw, 3rem);
+  }
+  .pillar-page {
+    animation: fadeIn 0.5s ease-out;
+  }
+  .introduction {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(var(--accent), 0.1);
+    border-radius: 8px;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .content > :global(*) {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .content > :global(*:hover) {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
-
-  .pillar-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem clamp(1rem, 5vw, 3rem);
-    animation: fadeIn 0.5s ease-out;
-  }
-  header {
-    margin-bottom: 2rem;
-  }
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: rgb(var(--accent));
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
   }
   h2, h3 {
     margin-bottom: 1.5rem;
   }
   p {
     margin-bottom: 1.2rem;
-  }
-  .pillar-image {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-top: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .content {
-    line-height: 1.8;
-    font-size: 1.1rem;
   }
   .content h2 {
     display: flex;
