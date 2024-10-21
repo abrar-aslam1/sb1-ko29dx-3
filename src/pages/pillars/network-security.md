@@ -30,4 +30,4 @@ Network security is a critical component of your overall business security strat
 
 For more information on implementing these practices, check out our [5 Essential Cybersecurity Tips](/blog/5-essential-cybersecurity-tips) blog post.
 
-Remember, network security is just one pillar of a comprehensive security strategy. Be sure to also review our other security pillars, such as [Data Protection](/pillars/data-protection) and [Employee Security Awareness](/pillars/employee-security-awareness), for a well-rounded approach to protecting your small business.
+Remember, network security is just one pillar of a comprehensive security strategy. Be sure to also review our other security pillars, such as [Data Protection](/pillars/data-protection), [Employee Security Awareness](/pillars/employee-security-awareness), and [Cloud Security](/pillars/cloud-security), for a well-rounded approach to protecting your small business.

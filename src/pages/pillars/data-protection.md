@@ -21,3 +21,5 @@ Protecting your business data is crucial in today's digital landscape. Here's ho
 For more on creating a comprehensive data protection strategy, check out our [How to Create a Disaster Recovery Plan](/blog/create-disaster-recovery-plan) blog post.
 
 Remember, data protection is an ongoing process. Regularly review and update your data protection measures to stay ahead of evolving threats.
+
+For cloud-specific data protection strategies, check out our [Cloud Security](/pillars/cloud-security) pillar.
