@@ -1,10 +1,23 @@
 ---
 import Layout from './Layout.astro';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, faq } = Astro.props;
+
+const faqSchema = faq ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.map(item => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+}) : null;
 ---
 
-<Layout title={frontmatter.title}>
+<Layout title={frontmatter.title} jsonLd={faqSchema}>
   <article class="pillar-page">
     <header>
       <h1>{frontmatter.title}</h1>
@@ -13,6 +26,17 @@ const { frontmatter } = Astro.props;
     <div class="content">
       <slot />
     </div>
+    {faq && (
+      <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        {faq.map(item => (
+          <div class="faq-item">
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </div>
+        ))}
+      </section>
+    )}
   </article>
 </Layout>
 
