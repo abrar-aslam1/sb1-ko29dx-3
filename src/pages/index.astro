@@ -33,9 +33,9 @@ const whyJoinReasons = [
 <Layout title="Protecting Your Small Business">
 	<section class="hero">
 		<div class="hero-content">
-			<h1>Join the BizSecurity Community</h1>
-			<p>Connect, learn, and strengthen your small business security with our expert community.</p>
-			<a href="/contact" class="cta-button">Join Now</a>
+			<h1>Secure Your Business, Join Our Community</h1>
+			<p>Empowering small businesses with expert cybersecurity knowledge and support.</p>
+			<a href="/contact" class="cta-button">Join BizSecurity Today</a>
 		</div>
 	</section>
 
@@ -49,25 +49,23 @@ const whyJoinReasons = [
 	</section>
 
 	<section class="security-pillars">
-		<h2 class="section-title">Security Pillars</h2>
+		<h2 class="section-title">Core Security Pillars</h2>
 		<div class="pillar-grid">
 			{securityPillars.map(pillar => (
 				<div class="pillar-card">
 					<div class="pillar-icon">{pillar.icon}</div>
 					<h3>{pillar.title}</h3>
-					<a href={pillar.url} class="pillar-link">Learn More</a>
+					<a href={pillar.url} class="pillar-link">Explore</a>
 				</div>
 			))}
 		</div>
 	</section>
 
 	<section class="why-join">
-		<h2 class="section-title">Why Join BizSecurity Community?</h2>
+		<h2 class="section-title">Why Join BizSecurity?</h2>
 		<div class="why-join-content">
-			<div class="why-join-text">
-				<p>
-					BizSecurity is your go-to community for small business cybersecurity. Share knowledge, get expert insights, and connect with peers facing similar challenges. Stay ahead of threats and protect your business with our supportive network of professionals and fellow business owners.
-				</p>
+			<div class="why-join-image">
+				<img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww" alt="Business team collaborating" />
 			</div>
 			<div class="why-join-reasons">
 				{whyJoinReasons.map(reason => (
@@ -82,7 +80,7 @@ const whyJoinReasons = [
 	</section>
 
 	<section class="community-benefits">
-		<h2 class="section-title">Benefits of Joining BizSecurity</h2>
+		<h2 class="section-title">Benefits of Our Community</h2>
 		<div class="benefits-grid">
 			{communityBenefits.map(benefit => (
 				<div class="benefit-card">
@@ -93,186 +91,216 @@ const whyJoinReasons = [
 			))}
 		</div>
 	</section>
+
+	<section class="cta-section">
+		<div class="cta-content">
+			<h2>Ready to Secure Your Business?</h2>
+			<p>Join BizSecurity today and take the first step towards comprehensive cybersecurity.</p>
+			<a href="/contact" class="cta-button">Get Started</a>
+		</div>
+	</section>
 </Layout>
 
 <style>
 	:root {
-		--section-title-color: #2c3e50; /* Dark blue-gray color for section titles */
+		--accent-color: #4a90e2;
+		--accent-dark: #3a7bd5;
+		--text-color: #333;
+		--background-light: #f8f9fa;
+		--card-background: #ffffff;
+		--section-spacing: 6rem;
 	}
+	
+	body {
+		font-family: 'Arial', sans-serif;
+		line-height: 1.6;
+		color: var(--text-color);
+	}
+
 	.hero {
-		background: linear-gradient(135deg, rgb(var(--accent)) 0%, rgb(var(--accent-light)) 100%);
+		background-image: url('https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
+		background-size: cover;
+		background-position: center;
 		color: white;
-		padding: 4rem 1rem;
+		padding: 8rem 2rem;
 		text-align: center;
-		border-radius: 20px;
-		margin-bottom: 4rem;
+		position: relative;
 	}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 1;
+	}
+
 	.hero-content {
+		position: relative;
+		z-index: 2;
 		max-width: 800px;
 		margin: 0 auto;
 	}
+
 	h1 {
-		font-size: 2.5rem;
+		font-size: 3.5rem;
 		margin-bottom: 1rem;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 	}
+
+	.hero p {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+
 	.section-title {
-		font-size: 2.25rem;
-		margin-bottom: 1.5rem;
-		color: var(--section-title-color);
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
 		text-align: center;
-		font-weight: bold;
+		color: var(--accent-color);
 	}
+
 	.cta-button {
 		display: inline-block;
-		background-color: white;
-		color: rgb(var(--accent));
-		padding: 0.8rem 1.5rem;
-		border-radius: 30px;
+		background-color: var(--accent-color);
+		color: white;
+		padding: 1rem 2rem;
+		border-radius: 50px;
 		text-decoration: none;
 		font-weight: bold;
-		margin-top: 1rem;
+		font-size: 1.2rem;
 		transition: background-color 0.3s ease, transform 0.3s ease;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 	}
+
 	.cta-button:hover {
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: var(--accent-dark);
 		transform: translateY(-3px);
 	}
+
 	.featured-posts, .security-pillars, .why-join, .community-benefits {
-		margin-top: 4rem;
-		padding: 0 1rem;
+		padding: var(--section-spacing) 2rem;
 	}
-	.benefits-grid {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 1rem;
-	}
-	.benefit-card {
-		background-color: rgb(var(--card-background));
-		border-radius: 15px;
-		padding: 1.5rem;
-		text-align: center;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition: transform 0.3s ease;
-		flex: 1 1 200px;
-		max-width: 250px;
-	}
-	.benefit-card:hover {
-		transform: translateY(-5px);
-	}
-	.benefit-card i {
-		font-size: 2rem;
-		color: rgb(var(--accent));
-		margin-bottom: 0.5rem;
-	}
-	.benefit-card h3 {
-		color: rgb(var(--accent));
-		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
-	}
-	.benefit-card p {
-		font-size: 0.9rem;
-		color: rgb(var(--text-secondary));
-	}
-	.card-grid, .pillar-grid {
+
+	.card-grid, .pillar-grid, .benefits-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		gap: 2rem;
 	}
-	.pillar-card {
-		background-color: rgb(var(--card-background));
+
+	.pillar-card, .benefit-card, .reason-card {
+		background-color: var(--card-background);
 		border-radius: 15px;
 		padding: 2rem;
 		text-align: center;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition: transform 0.3s ease;
-	}
-	.pillar-card:hover {
-		transform: translateY(-5px);
-	}
-	.pillar-icon {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-	}
-	.pillar-link {
-		display: inline-block;
-		color: rgb(var(--accent));
-		text-decoration: none;
-		font-weight: bold;
-		transition: color 0.3s ease;
-	}
-	.pillar-link:hover {
-		color: rgb(var(--accent-light));
-	}
-	.why-join-content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2rem;
-	}
-	.why-join-text {
-		max-width: 800px;
-		text-align: center;
-		margin-bottom: 2rem;
-	}
-	.why-join-reasons {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 1.5rem;
-		width: 100%;
-	}
-	.reason-card {
-		background-color: rgb(var(--card-background));
-		border-radius: 15px;
-		padding: 1.5rem;
-		text-align: center;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
-	.reason-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+
+	.pillar-card:hover, .benefit-card:hover, .reason-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 	}
-	.reason-card i {
-		font-size: 2.5rem;
-		color: rgb(var(--accent));
+
+	.pillar-icon, .benefit-card i, .reason-card i {
+		font-size: 3rem;
+		color: var(--accent-color);
 		margin-bottom: 1rem;
 	}
-	.reason-card h3 {
-		color: var(--section-title-color);
-		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
+
+	.pillar-link {
+		display: inline-block;
+		color: var(--accent-color);
+		text-decoration: none;
+		font-weight: bold;
+		margin-top: 1rem;
+		transition: color 0.3s ease;
 	}
-	.reason-card p {
-		font-size: 0.9rem;
-		color: rgb(var(--text-secondary));
+
+	.pillar-link:hover {
+		color: var(--accent-dark);
+	}
+
+	.why-join {
+		background-color: var(--background-light);
+	}
+
+	.why-join-content {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+	}
+
+	.why-join-image {
+		flex: 1;
+	}
+
+	.why-join-image img {
+		width: 100%;
+		border-radius: 15px;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	}
+
+	.why-join-reasons {
+		flex: 1;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.cta-section {
+		background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNtYWxsJTIwYnVzaW5lc3MlMjB3b2tyaW5nfGVufDB8fDB8fHww');
+		background-size: cover;
+		background-position: center;
+		color: white;
+		text-align: center;
+		padding: 6rem 2rem;
+		position: relative;
+	}
+
+	.cta-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.6);
+		z-index: 1;
+	}
+
+	.cta-content {
+		position: relative;
+		z-index: 2;
+	}
+
+	.cta-section h2 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.cta-section p {
+		font-size: 1.2rem;
+		margin-bottom: 2rem;
 	}
 
 	@media (max-width: 768px) {
 		h1 {
-			font-size: 2rem;
+			font-size: 2.5rem;
 		}
 		.section-title {
 			font-size: 2rem;
 		}
 		.hero {
-			padding: 3rem 1rem;
-			margin-bottom: 3rem;
+			padding: 6rem 1rem;
 		}
-		.featured-posts, .security-pillars, .why-join, .community-benefits {
-			margin-top: 3rem;
+		.why-join-content {
+			flex-direction: column;
 		}
-		.benefits-grid {
-			justify-content: space-around;
-		}
-		.benefit-card {
-			flex-basis: calc(50% - 1rem);
-			max-width: none;
-		}
-		.card-grid, .pillar-grid {
-			grid-template-columns: 1fr;
-		}
-		.why-join-reasons {
+		.card-grid, .pillar-grid, .benefits-grid {
 			grid-template-columns: 1fr;
 		}
 	}
