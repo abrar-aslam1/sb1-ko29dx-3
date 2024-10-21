@@ -1,0 +1,25 @@
+---
+const { name } = Astro.props;
+
+// This is a simple implementation. You might want to use an icon library or SVG sprites for a more robust solution.
+const iconMap = {
+  question: "❓",
+  rocket: "🚀",
+  info: "ℹ️",
+  check: "✅",
+  // Add more icons as needed
+};
+
+const icon = iconMap[name] || "❔";
+---
+
+<span class="icon" aria-hidden="true">{icon}</span>
+
+<style>
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import Layout from './Layout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
+import Icon from '../components/Icon.astro';
 
 const { frontmatter, faq } = Astro.props;
 
@@ -30,7 +31,7 @@ const faqSchema = faq ? JSON.stringify({
     </div>
     {faq && (
       <section class="faq">
-        <h2>Frequently Asked Questions</h2>
+        <h2><Icon name="question" /> Frequently Asked Questions</h2>
         {faq.map((item, index) => (
           <details class="faq-item">
             <summary>{item.question}</summary>
@@ -40,7 +41,7 @@ const faqSchema = faq ? JSON.stringify({
       </section>
     )}
     <section class="cta">
-      <h2>Ready to enhance your cybersecurity?</h2>
+      <h2><Icon name="rocket" /> Ready to enhance your cybersecurity?</h2>
       <p>Contact us today for a free consultation.</p>
       <a href="/contact" class="cta-button">Get Started</a>
     </section>
@@ -87,6 +88,11 @@ const faqSchema = faq ? JSON.stringify({
     line-height: 1.8;
     font-size: 1.1rem;
   }
+  .content h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
   .faq-item {
     margin-bottom: 1rem;
     border-bottom: 1px solid rgba(var(--accent), 0.2);
@@ -119,5 +125,43 @@ const faqSchema = faq ? JSON.stringify({
   }
   .cta-button:hover {
     background-color: rgba(var(--accent), 0.8);
+  }
+  .call-out-box {
+    background-color: rgba(var(--accent), 0.1);
+    border-left: 4px solid rgb(var(--accent));
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .image-sidebar {
+    float: right;
+    width: 30%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 768px) {
+    .image-sidebar {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .icon-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .icon-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .pull-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: rgb(var(--accent));
+    border-left: 4px solid rgb(var(--accent));
+    padding-left: 1rem;
+    margin: 1.5rem 0;
   }
 </style>
