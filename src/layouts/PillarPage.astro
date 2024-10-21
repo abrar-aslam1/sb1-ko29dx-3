@@ -137,7 +137,7 @@ const faqSchema = faq ? JSON.stringify({
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: rgba(var(--accent), 0.1);
     border-radius: 8px;
   }
@@ -149,10 +149,15 @@ const faqSchema = faq ? JSON.stringify({
   }
   .content > :global(*) {
     background-color: #f8f8f8;
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .content > :global(p),
+  .content > :global(ul),
+  .content > :global(ol) {
+    padding: 0 1rem;
   }
   .content > :global(*:hover) {
     transform: translateY(-3px);
@@ -176,12 +181,16 @@ const faqSchema = faq ? JSON.stringify({
   .faq-item {
     margin-bottom: 1rem;
     border-bottom: 1px solid rgba(var(--accent), 0.2);
-    padding-bottom: 1rem;
+    padding: 1rem;
   }
   .faq-item summary {
     cursor: pointer;
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+  .faq-item p {
+    padding: 0 1rem;
   }
   .faq-item summary:hover {
     color: rgb(var(--accent));
