@@ -86,9 +86,13 @@ const whyJoinReasons = [
 				<div class="reasons-grid">
 					{whyJoinReasons.map(reason => (
 						<div class="reason-card">
-							<i class={reason.icon}></i>
-							<h3>{reason.title}</h3>
-							<p>{reason.description}</p>
+							<div class="reason-icon">
+								<i class={reason.icon}></i>
+							</div>
+							<div class="reason-content">
+								<h3>{reason.title}</h3>
+								<p>{reason.description}</p>
+							</div>
 						</div>
 					))}
 				</div>
