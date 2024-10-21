@@ -29,6 +29,8 @@ By implementing strong network security measures, you create a resilient foundat
 
 ## Key Aspects of Network Security
 
+<div class="key-aspects">
+
 1. **Firewalls**: Your first line of defense against external threats. Learn more about [the role of firewalls in small business security](/blog/role-of-firewalls).
 
 2. **Virtual Private Networks (VPNs)**: Essential for secure remote access to your network.
@@ -38,6 +40,8 @@ By implementing strong network security measures, you create a resilient foundat
 4. **Network Segmentation**: Dividing your network into separate segments can limit the spread of potential breaches.
 
 5. **Secure Wi-Fi**: Implement strong encryption and authentication for your wireless networks. Learn more about [Wireless Security](/pillars/network-security/wireless-security).
+
+</div>
 
 ## Best Practices
 
