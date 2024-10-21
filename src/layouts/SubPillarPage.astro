@@ -15,30 +15,72 @@ const { frontmatter } = Astro.props;
     <div class="content">
       <slot />
     </div>
+    <section class="cta">
+      <h2>Ready to enhance your cybersecurity?</h2>
+      <p>Contact us today for a free consultation.</p>
+      <a href="/contact" class="cta-button">Get Started</a>
+    </section>
   </article>
 </Layout>
 
 <style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
   .sub-pillar-page {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem clamp(1rem, 5vw, 3rem);
+    animation: fadeIn 0.5s ease-out;
   }
   header {
     margin-bottom: 2rem;
   }
   h1 {
-    font-size: 2.25rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     color: rgb(var(--accent));
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  h2, h3 {
+    margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 1.2rem;
   }
   .sub-pillar-image {
     width: 100%;
-    max-height: 300px;
+    height: auto;
+    max-height: 500px;
     object-fit: cover;
-    border-radius: 8px;
-    margin-top: 1rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .content {
-    line-height: 1.6;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  .cta {
+    background-color: rgba(var(--accent), 0.1);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .cta-button {
+    display: inline-block;
+    background-color: rgb(var(--accent));
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .cta-button:hover {
+    background-color: rgba(var(--accent), 0.8);
   }
 </style>
