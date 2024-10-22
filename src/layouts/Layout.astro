@@ -45,7 +45,7 @@ const organizationSchema = JSON.stringify({
 		<title>{title} | BizSecurity</title>
 		<script type="application/ld+json" set:html={organizationSchema}></script>
 		{Astro.props.jsonLd && <script type="application/ld+json" set:html={JSON.stringify(Astro.props.jsonLd)}></script>}
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Metrophobic&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	</head>
 	<body>
@@ -71,6 +71,12 @@ const organizationSchema = JSON.stringify({
 		background: rgb(var(--background));
 		color: rgb(var(--text-primary));
 		font-size: 16px;
+	}
+	body {
+		font-family: 'Metrophobic', sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Poppins', sans-serif;
 	}
 	body {
 		margin: 0;
